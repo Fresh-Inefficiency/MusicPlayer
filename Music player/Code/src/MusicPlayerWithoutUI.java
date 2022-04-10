@@ -7,7 +7,7 @@ public class MusicPlayerWithoutUI {
 
     Clip clip;
     long currentFrame;
-    static String filePath ="D:\\Coding\\Music player\\wav files";
+    static String filePath ="{Insert file folder path here}";
     String status;
 
     private static String[] playList(){
