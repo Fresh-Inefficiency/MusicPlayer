@@ -109,28 +109,7 @@ public class MusicPlayerWithoutUI {
     }
 
 
-    public static void main(String[] args)
-    {
-        boolean quit = false;
-        Scanner sc = new Scanner(System.in);
-        int songNo=0;
-        while(!quit) {
-            System.out.println("Welcome, to music player!!");
-            System.out.println("Please select a song to Play:");
-            printSongsList();
-
-            System.out.print("Enter song no or Press 0 to exit: ");
-
-            songNo = sc.nextInt();
-            if (songNo==0){
-                quit=true;
-                break;
-            }
-            String songName = getSongName(songNo);
-
-            playerFunctions(songName);
-        }
-    }
+   
 
     public void stop(){
         if(!clip.isRunning()){
@@ -178,5 +157,28 @@ public class MusicPlayerWithoutUI {
 
         }
 
+    }
+    
+     public static void main(String[] args)
+    {
+        boolean quit = false;
+        Scanner sc = new Scanner(System.in);
+        int songNo=0;
+        while(!quit) {
+            System.out.println("Welcome, to music player!!");
+            System.out.println("Please select a song to Play:");
+            printSongsList();
+
+            System.out.print("Enter song no or Press 0 to exit: ");
+
+            songNo = sc.nextInt();
+            if (songNo==0){
+                quit=true;
+                break;
+            }
+            String songName = getSongName(songNo);
+
+            playerFunctions(songName);
+        }
     }
 }
